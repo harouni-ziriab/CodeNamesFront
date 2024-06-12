@@ -1,0 +1,143 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--background));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url('../pictures/bg_colorful.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.header-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    margin-bottom: 20px; /* Space between image and h1 */
+}
+
+.main-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 40px; /* More space between h1 and create game button */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+    margin-bottom: 60px; /* More space between button and content-wrapper */
+}
+
+button {
+    transition: all 0.5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 20px; /* Slightly larger font size */
+    background-color: transparent;
+    padding: 15px 20px; /* Increased padding for a bigger button */
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box-shadow for some edge */
+}
+
+button:hover {
+    color: #001F3F;
+    background-color: #fff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow on hover */
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    height: 50vh; /* Take half of the viewport height */
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: end; /* Align items to the bottom */
+}
+
+.left-agent, .right-agent {
+    position: relative;
+}
+
+.left-agent img, .right-agent img {
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    max-width: 100%; /* Adjust the size as needed */
+}
+
+.left-agent img {
+    left: 0;
+}
+
+.right-agent img {
+    right: 0;
+}
+
+.rules {
+    background: linear-gradient(to bottom, #ffeb99, #ffcc66);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: #663300;
+    width: 70%; /* Reduce the width to half */
+    align-self: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    margin-top: 20px; /* Add margin-top to separate from the button */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+.rules h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #993300;
+}
+
+.rules ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.rules ol li {
+    margin-bottom: 10px;
+}
